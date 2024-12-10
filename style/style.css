@@ -1,0 +1,140 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #c7d7f5;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background: #ffffff;
+    color: rgb(0, 14, 141);
+    padding: 0px 0;
+    width:100%;
+    text-align: center;
+    border-bottom: 4px solid #003399;
+}
+
+.logo {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 10px 0 0 0;
+}
+
+.nav-list a {
+    color: rgb(0, 14, 141);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.nav-list a:hover {
+    text-decoration: underline;
+}
+
+section{
+    margin:auto;
+    width:80%;
+
+}
+.about, .services {
+    margin: 20px 0;
+    padding: 20px;
+    background: white;
+    border-left: 5px solid #9fb8e9;
+}
+
+h2 {
+    color: #273f70;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #273f70;
+    padding-bottom: 5px;
+}
+
+.service-list {
+    list-style: circle inside;
+    margin: 15px 0 0 20px;
+    color: #273f70;
+}
+
+.footer {
+    background: #003399;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    width:100%;
+    margin-top: 30px;
+    border-top: 4px solid #002266;
+}
+
+#company-info{
+    background-color: rgb(224, 224, 224);
+    border-radius: 15px;
+    width:80%;
+    margin-top:20px;
+    filter:brightness(1.5);
+
+    overflow: hidden;
+}
+
+#company-info img{
+    top:0;
+    right:0;
+    position:absolute;
+}
+
+/* Ajout d'une animation fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+        transform: translateX(100px);
+
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        transform: translateX(0px);
+
+    }
+}
+
+/* Application des animations avec des délais différents */
+section {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.288);
+    border-radius: 15px;
+}
+
+.about {
+    animation-delay: 3s; /* Délai pour la section about */
+}
+
+.services {
+    animation-delay: 2s; /* Délai pour la section services */
+}
+
+#company-info {
+    animation-delay: 1s; /* Délai pour la section company-info */
+}
